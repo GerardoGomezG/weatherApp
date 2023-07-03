@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.svg">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+<body>
+    <span>
+        <h1>Weather Forecast</h1>
+        <div id="citySearch">
+            <label for="city">City:</label>
+            <input type="text" placeholder="Enter city..." id="city" required>
+            <button>🔍</button>
+        </div>
+    </span>
+    <h2></h2>
+    <div id="daysContainer">
+        <h3></h3>
+        <template>
+            <div id="dayCard">
+                <h4></h4>
+                <img class="weatherImage">
+                <div class="tempContainer">
+                    <img src="./assets/maxTemp.svg" alt="max temp" height="48px" width="48px">
+                    <p id="maxTemp"></p>
+                    <img src="./assets/minTemp.svg" alt="min temp"  height="48px" width="48px">
+                    <p id="minTemp"></p>
+                </div>
+            </div>
+        </template>
+    </div>
+    <script src="index.js" type="module"></script>
+</body>
+</html>

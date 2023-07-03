@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: skyblue;
+}
+
+span {
+  display: grid;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+#citySearch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+h2 {
+  text-align: center;
+}
+
+#daysContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: fit-content;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+#dayCard {
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid gray;
+}
+
+.tempContainer {
+  display: inline-flex;
+  align-items: center;
+}
+
+.weatherImage {
+  display: inline;
+}
