@@ -170,7 +170,7 @@ async function getLocationByCity(givenCity) {
 }
 
 async function getLocationByIPAddress(ipAdress) {
-  const ipLocationResponse = await fetch(`http://ip-api.com/json/${ipAdress}`);
+  const ipLocationResponse = await fetch(`https://ip-api.com/json/${ipAdress}`);
   const ipLocationData = await ipLocationResponse.json();
   const { city } = ipLocationData;
   const { lat } = ipLocationData;
