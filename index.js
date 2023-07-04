@@ -170,7 +170,7 @@ async function getLocationByCity(givenCity) {
 }
 
 async function getLocationByIPAddress(ipAdress) {
-  const ipLocationResponse = await fetch(`https://ip-api.com/json/${ipAdress}`);
+  const ipLocationResponse = await fetch(`http://ip-api.com/json/${ipAdress}`);
   const ipLocationData = await ipLocationResponse.json();
   const { city } = ipLocationData;
   const { lat } = ipLocationData;
@@ -182,6 +182,7 @@ btn.addEventListener('click', () => {
   if (cityInput.value.trim().length > 1) {
     container.replaceChildren();
     getLocationByCity(cityInput.value.trim());
+    cityInput.value = '';
   }
 });
 
@@ -190,6 +191,7 @@ cityInput.addEventListener('keypress', (e) => {
   else if ((cityInput.value.trim().length > 1) && (e.key === 'Enter')) {
     container.replaceChildren();
     getLocationByCity(cityInput.value.trim());
+    cityInput.value = '';
   }
 });
 
@@ -198,4 +200,5 @@ document.addEventListener('DOMContentLoaded', async () => {
   const ipInfo = await ipInfoResponse.json();
   const ipAddress = await ipInfo.ip;
   getLocationByIPAddress(ipAddress);
+  cityInput.value = '';
 });
