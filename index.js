@@ -175,7 +175,6 @@ async function getLocationByIPAddress(ipAdress) {
   const { city } = ipLocationData;
   const { lat } = ipLocationData;
   const { lon } = ipLocationData;
-  console.log(lat + ' getLocationByIPAddress');
   getWeather(city, lat, lon);
 }
 
